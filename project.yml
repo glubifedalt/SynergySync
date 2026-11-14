@@ -1,0 +1,21 @@
+name: SynergySync
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "16.0"
+  generateInfoPlist: true
+targets:
+  SynergySync:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.SynergySync
+        PRODUCT_NAME: SynergySync
+        SWIFT_VERSION: "5.9"
+        INFOPLIST_KEY_NSCalendarsUsageDescription: "School Timetable needs calendar access to refresh your school lessons."
+        INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription: "School Timetable needs access to create and refresh lessons in its dedicated calendar."
+        INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription: "School Timetable needs permission to add lessons to your calendar."
+        INFOPLIST_KEY_CFBundleDisplayName: "Synergy Sync"
