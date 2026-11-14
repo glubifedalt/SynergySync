@@ -35,7 +35,7 @@ final class CalendarSync {
             let granted = try await store.requestFullAccessToEvents()
             guard granted else { throw CalendarSyncError.accessDenied }
         } else {
-            let granted = try await withCheckedThrowingContinuation { continuation in
+            let granted = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Bool, Error>) in
                 store.requestAccess(to: .event) { granted, error in
                     if let error { continuation.resume(throwing: error) }
                     else { continuation.resume(returning: granted) }
