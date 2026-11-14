@@ -54,7 +54,7 @@ struct ContentView: View {
         NavigationStack {
             Form {
                 Section("School Synergy session") {
-                    SecureField("Cookie header value", text: $model.cookie, axis: .vertical)
+                    SecureField("Cookie header value", text: $model.cookie)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     Button("Paste from Clipboard") {
